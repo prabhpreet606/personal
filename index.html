@@ -3,265 +3,153 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Luxe Bistro - Premium Dining</title>
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Roboto:wght@300;400&display=swap" rel="stylesheet">
+    <title>GameZone - Play Free Online Games</title>
     <style>
         body {
-            font-family: 'Roboto', Arial, sans-serif;
+            font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
-            line-height: 1.8;
-            color: #f4f4f4;
-            background: linear-gradient(135deg, #1a1a1a 0%, #2c2c2c 100%);
+            background: #f4f4f4;
+            color: #333;
         }
         header {
-            background: rgba(0, 0, 0, 0.9);
-            color: gold;
-            padding: 1.5rem 2rem;
-            position: sticky;
-            top: 0;
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
-            backdrop-filter: blur(10px);
-            -webkit-backdrop-filter: blur(10px);
+            background: #007bff;
+            color: white;
+            padding: 1rem;
+            text-align: center;
         }
         nav {
             display: flex;
-            justify-content: space-between;
-            align-items: center;
-            max-width: 1200px;
-            margin: 0 auto;
-        }
-        .logo {
-            font-family: 'Playfair Display', Georgia, serif;
-            font-size: 2rem;
-            font-weight: 700;
-        }
-        nav ul {
-            list-style: none;
-            display: flex;
-            gap: 2rem;
+            justify-content: center;
+            gap: 1rem;
+            margin-top: 1rem;
         }
         nav a {
-            color: gold;
+            color: white;
             text-decoration: none;
-            font-weight: 400;
-            transition: color 0.3s;
+            padding: 0.5rem;
         }
         nav a:hover {
-            color: #fff;
-        }
-        .hero {
-            background: url('https://images.unsplash.com/photo-1414235077428-338989a2e8c0?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80') no-repeat center center/cover;
-            height: 80vh;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            position: relative;
-        }
-        .hero-overlay {
-            background: rgba(0, 0, 0, 0.6);
-            padding: 2rem;
-            border-radius: 10px;
-            text-align: center;
-            max-width: 600px;
-        }
-        .hero h1 {
-            font-family: 'Playfair Display', Georgia, serif;
-            font-size: 3rem;
-            margin-bottom: 1rem;
-            color: gold;
-        }
-        .hero p {
-            font-size: 1.2rem;
-            margin-bottom: 2rem;
-        }
-        .hero button {
-            background: gold;
-            color: #000;
-            border: none;
-            padding: 1rem 2rem;
-            font-size: 1.1rem;
-            cursor: pointer;
+            background: #0056b3;
             border-radius: 5px;
-            transition: background 0.3s;
         }
-        .hero button:hover {
-            background: #fff;
+        .search {
+            margin: 1rem auto;
+            max-width: 400px;
+        }
+        .search input {
+            width: 100%;
+            padding: 0.5rem;
+            border: 1px solid #ccc;
+            border-radius: 5px;
         }
         section {
-            padding: 4rem 2rem;
+            padding: 2rem;
             max-width: 1200px;
             margin: 0 auto;
         }
-        #about .about-content {
-            display: flex;
-            gap: 2rem;
-            align-items: center;
-        }
-        #about .text {
-            flex: 1;
-        }
-        .about-img {
-            flex: 1;
-            border-radius: 10px;
-            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5);
-        }
-        #menu h2 {
-            text-align: center;
-            font-family: 'Playfair Display', Georgia, serif;
-            color: gold;
-            margin-bottom: 2rem;
-        }
-        .menu-items {
+        .featured {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 2rem;
-        }
-        .item {
-            background: rgba(255, 255, 255, 0.1);
-            border-radius: 10px;
-            overflow: hidden;
-            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
-            transition: transform 0.3s;
-        }
-        .item:hover {
-            transform: translateY(-10px);
-        }
-        .item img {
-            width: 100%;
-            height: 200px;
-            object-fit: cover;
-        }
-        .item h3 {
-            color: gold;
-            margin: 1rem;
-            font-family: 'Playfair Display', Georgia, serif;
-        }
-        .item p {
-            margin: 0 1rem 1rem;
-        }
-        #contact {
-            background: rgba(0, 0, 0, 0.8);
-            border-radius: 10px;
-            margin: 2rem auto;
-            padding: 3rem;
-        }
-        .contact-info {
-            margin-bottom: 2rem;
-        }
-        form {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
             gap: 1rem;
         }
-        form input, form textarea {
-            padding: 0.8rem;
-            border: 1px solid gold;
-            border-radius: 5px;
-            background: rgba(255, 255, 255, 0.1);
-            color: #fff;
+        .game {
+            background: white;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            text-align: center;
         }
-        form textarea {
-            grid-column: span 2;
-        }
-        form button {
-            grid-column: span 2;
-            background: gold;
-            color: #000;
+        .game iframe {
+            width: 100%;
+            height: 200px;
             border: none;
-            padding: 1rem;
-            font-size: 1.1rem;
-            cursor: pointer;
-            border-radius: 5px;
-            transition: background 0.3s;
         }
-        form button:hover {
-            background: #fff;
+        .game h3 {
+            margin: 1rem;
+        }
+        .categories {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1rem;
+            justify-content: center;
+        }
+        .category {
+            background: #007bff;
+            color: white;
+            padding: 1rem;
+            border-radius: 5px;
+            text-decoration: none;
+            flex: 1 1 200px;
+            text-align: center;
+        }
+        .category:hover {
+            background: #0056b3;
         }
         footer {
-            background: #000;
-            color: gold;
+            background: #333;
+            color: white;
             text-align: center;
-            padding: 1.5rem;
-            font-size: 0.9rem;
-        }
-        footer a {
-            color: gold;
-            text-decoration: none;
+            padding: 1rem;
+            margin-top: 2rem;
         }
     </style>
 </head>
 <body>
     <header>
+        <h1>GameZone</h1>
+        <p>Play free online games anytime!</p>
         <nav>
-            <div class="logo">Luxe Bistro</div>
-            <ul>
-                <li><a href="#home">Home</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#menu">Menu</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
+            <a href="#featured">Featured</a>
+            <a href="#categories">Categories</a>
+            <a href="#contact">Contact</a>
         </nav>
+        <div class="search">
+            <input type="text" placeholder="Search games...">
+        </div>
     </header>
 
-    <section id="home" class="hero">
-        <div class="hero-overlay">
-            <h1>Indulge in Culinary Excellence</h1>
-            <p>Exquisite flavors, unparalleled ambiance. Reserve your table for an unforgettable experience.</p>
-            <button>Reserve Now</button>
+    <section id="featured">
+        <h2>Featured Games</h2>
+        <div class="featured">
+            <div class="game">
+                <iframe src="https://poki.com/en/g/subway-surfers" title="Subway Surfers"></iframe>
+                <h3>Subway Surfers</h3>
+                <p>Run and dodge trains in this endless runner!</p>
+            </div>
+            <div class="game">
+                <iframe src="https://poki.com/en/g/temple-run-2" title="Temple Run 2"></iframe>
+                <h3>Temple Run 2</h3>
+                <p>Escape the temple while collecting coins.</p>
+            </div>
+            <div class="game">
+                <iframe src="https://poki.com/en/g/2048" title="2048"></iframe>
+                <h3>2048</h3>
+                <p>Slide tiles to combine numbers to 2048.</p>
+            </div>
         </div>
     </section>
 
-    <section id="about">
-        <div class="about-content">
-            <div class="text">
-                <h2>About Luxe Bistro</h2>
-                <p>Established in 2020, Luxe Bistro redefines fine dining with locally sourced ingredients and innovative cuisine. Our chefs craft each dish with passion, ensuring every bite is a masterpiece.</p>
-            </div>
-            <img src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Elegant Restaurant Interior" class="about-img">
-        </div>
-    </section>
-
-    <section id="menu">
-        <h2>Our Signature Menu</h2>
-        <div class="menu-items">
-            <div class="item">
-                <img src="https://images.unsplash.com/photo-1546833999-b9f581a1996d?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="Truffle Risotto">
-                <h3>Truffle Risotto</h3>
-                <p>Creamy Arborio rice infused with black truffles and Parmesan. $28</p>
-            </div>
-            <div class="item">
-                <img src="https://images.unsplash.com/photo-1551782450-17144efb5723?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="Wagyu Steak">
-                <h3>Wagyu Steak</h3>
-                <p>Premium A5 Wagyu, grilled to perfection with seasonal vegetables. $65</p>
-            </div>
-            <div class="item">
-                <img src="https://images.unsplash.com/photo-1565299624946-b28f40a0ca4b?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="Dessert Platter">
-                <h3>Chocolate Soufflé</h3>
-                <p>Decadent dark chocolate soufflé with raspberry coulis. $15</p>
-            </div>
+    <section id="categories">
+        <h2>Game Categories</h2>
+        <div class="categories">
+            <a href="#" class="category">Action</a>
+            <a href="#" class="category">Puzzle</a>
+            <a href="#" class="category">Racing</a>
+            <a href="#" class="category">Adventure</a>
+            <a href="#" class="category">Sports</a>
+            <a href="#" class="category">Strategy</a>
         </div>
     </section>
 
     <section id="contact">
         <h2>Contact Us</h2>
-        <div class="contact-info">
-            <p><strong>Address:</strong> 123 Elegance Ave, Gourmet City, GC 12345</p>
-            <p><strong>Phone:</strong> (555) 123-4567</p>
-            <p><strong>Email:</strong> reservations@luxebistro.com</p>
-            <p><strong>Hours:</strong> Mon-Sun: 5 PM - 11 PM</p>
-        </div>
-        <form>
-            <input type="text" placeholder="Your Name" required>
-            <input type="email" placeholder="Your Email" required>
-            <input type="tel" placeholder="Phone Number">
-            <textarea placeholder="Special Requests or Message"></textarea>
-            <button type="submit">Send Inquiry</button>
-        </form>
+        <p>Email: support@gamezone.com</p>
+        <p>Follow us on social media for updates!</p>
     </section>
 
     <footer>
-        <p>&copy; 2023 Luxe Bistro. All rights reserved. | Follow us on <a href="#" style="color: gold;">Instagram</a></p>
+        <p>&copy; 2023 GameZone. All games are for entertainment. Some games may require internet.</p>
     </footer>
 </body>
 </html>
